@@ -70,7 +70,7 @@ inputForm.addEventListener('submit', async function(event) {
 
 // Generate chatbot response function
 async function getYodaResponse(text) {
-	url = `http://localhost/v2/aiproducts/askyoda/${project_uuid}/ask_llm_project`
+	url = `https://api-staging/v2/aiproducts/askyoda/${project_uuid}/ask_llm_project`
 	payload = {
 		"query": text,
     "llm_provider": "openai",
