@@ -1,0 +1,271 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#edenai-yoda-chatbot-container {
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    height: 0;
+    width: 60px;
+    overflow: hidden;
+  }
+.visible {
+  height: auto !important;
+  opacity: 1 !important;
+  transition: opacity 1s ease-out !important;
+  width: 400px !important;
+}
+
+#edenai-yoda-chatbot {
+    background-color: #f5f5f5;
+    border: 1px solid #eef1f5;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  #edenai-yoda-header {
+    background-color: #428bca;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+
+  message-container {
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  #edenai-yoda-conversation {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @keyframes message-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .edenai-yoda-chatbot-message {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+    padding: 0 0;
+  }
+
+  .edenai-yoda-user-message {
+    justify-content: flex-end;
+  }
+
+
+.edenai-yoda-chatbot-text {
+    background-color: white;
+    color: #333333;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #edenai-yoda-input-form {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eef1f5;
+  }
+  
+  #edenai-yoda-input-field {
+    flex: 1;
+    height: 60px;
+    border: 1px solid #eef1f5;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    background: #ffffff;
+    color: #333333;
+    border: none;
+  }
+
+  .edenai-yoda-send-icon {
+    margin-right: 10px;
+    cursor: pointer;
+    color: grey;
+    font-size: 15px;
+  }
+
+  .edenai-yoda-send-icon:hover {
+    color: black;
+    font-size: 18px;
+  }
+  
+  #edenai-yoda-input-field:focus {
+    border-color: #333333;
+    outline: none;
+  }
+  
+  #edenai-yoda-submit-button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .edenai-yoda-chatbot:hover::after {    
+    content: attr(sentTime);
+    position: absolute;
+    top: -3px;
+    font-size: 10px;
+    color: gray;
+    left: 50px
+  }
+
+  .edenai-yoda-user-message:hover::after {    
+    content: attr(sentTime);
+    position: absolute;
+    top: -3px;
+    font-size: 10px;
+    color: gray;
+  }
+
+  .edenai-yoda-icon-chat-llm {
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  .edenai-yoda-prompt-answer-llm {
+    background: rgb(243, 244, 247);
+    animation: slideIn 0.3s ease-in-out;
+  }
+
+  .edenai-yoda-chat-askllm-bubble {
+    /* padding-top: 1.5rem; */
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    /* animation when message appear */
+  }
+
+  .edenai-yoda-icon-chat-eden {
+    background: #008ecc;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+  }
+
+
+  .edenai-yoda-triangle-left.edenai-yoda-left-top:before{
+    content: ' ';
+    position: absolute;
+    /* border-top:2px red solid; */
+    width:6px;
+    top:15px;
+    right:auto;
+    height:2px;
+    background:white;
+  }
+  .edenai-yoda-triangle-left.edenai-yoda-left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    left: 40px;
+    /* right: -30px; */
+    top: 15px; 
+    background:radial-gradient(ellipse at bottom left, transparent 28px, white 29px , white 30px , white 31px);
+    /* border-top:solid red 2px;  */
+  }
+
+  .edenai-yoda-triangle-right.edenai-yoda-right-top:before{
+    content: ' ';
+    position: absolute;
+    /* border-top:2px red solid; */
+    width:6px;
+    top:15px;
+    right:0;
+    height:2px;
+    background:white;
+  }
+  .edenai-yoda-triangle-right.edenai-yoda-right-top:after{
+    content: ' ';
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    left: auto;
+    /* right: -30px; */
+    top: 15px; 
+    background:radial-gradient(ellipse at bottom right, transparent 28px, white 29px , white 30px , white 31px);
+    /* border-top:solid red 2px;  */
+  }
+
+  .edenai-yoda-chatbot-button-open-close {
+    background-color: #008ecc;
+    border: medium;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.2) 0px 2px 12px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .edenai-yoda-chatbot-button-open-close:hover {
+    width: 65px;
+    height: 65px;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

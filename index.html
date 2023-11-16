@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YODA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: end;">
+      <div id="edenai-yoda-chatbot-container">
+        <div id="edenai-yoda-header">
+            <h1>YODA</h1>
+        </div>
+        <div id="edenai-yoda-chatbot">
+            <div id="edenai-yoda-conversation">
+              <div class="edenai-yoda-chatbot-message chatbot">
+                <div
+                  alt="Card image cap"
+                  class="edenai-yoda-chat-askllm-bubble edenai-yoda-prompt-answer-llm"
+                >
+                  <div
+                    alt="Card image cap"
+                    class="edenai-yoda-icon-chat-llm edenai-yoda-icon-chat-eden"
+                  >
+                    <img
+                    height="30px"
+                    width="30px"
+                    src="assets/img/icons/EdenColors.svg"
+                    alt
+                    style="filter: brightness(0) invert(1)"
+                    />
+                  </div>
+                </div>
+                <p class="edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top">Hi! 👋 it's great to see you!</p>
+              </div>
+            </div>
+            <form id="edenai-yoda-input-form">
+              <message-container>
+                <input id="edenai-yoda-input-field" type="text" placeholder="Type your message here">
+                <button id="edenai-yoda-submit-button" type="submit">
+                  <i
+                  class="edenai-yoda-send-icon fa fa-paper-plane"
+                    ></i>
+                </button>
+              </message-container>
+                
+            </form>
+        </div>  
+
+      </div>
+
+      <button id="edenai-yoda-open-close-chatbot" class="edenai-yoda-chatbot-button-open-close">
+        <i class="fa fa-comment" style="font-size: 30px; color: white;"></i>
+      </button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
