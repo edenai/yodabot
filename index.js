@@ -1,10 +1,10 @@
 var project_uuid = ""
+var historyChat = [];
 
 window.addEventListener("load", () => {
   let params = (new URL(document.location)).searchParams;
   if (params) {
     project_uuid = params.get('project');
-    console.log(project_uuid);
   }
   }
 )
@@ -28,8 +28,8 @@ buttonChatbot.addEventListener('click', function(event) {
 		chatBotContainer.classList.add('visible');
 		buttonIcon.className = "fa fa-window-close"
 		data = "show"
-	} 
-	window.parent.postMessage(data, "https://edenai:github.io/yodabot")
+	}
+	window.parent.postMessage(data, "*");
 });
 
 // Add event listener to input form
@@ -65,21 +65,27 @@ inputForm.addEventListener('submit', async function(event) {
 		<p class="edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top">${response}</p>`
   conversation.appendChild(message);
   message.scrollIntoView({behavior: "smooth"});
+
+  if (response != "Error") {
+    historyChat.push({
+      user: input,
+      assistant: response
+    })
+  } 
 });
   
 
 // Generate chatbot response function
 async function getYodaResponse(text) {
-	url = `https://api-staging/v2/aiproducts/askyoda/${project_uuid}/ask_llm_project`
+	url = `https://api.edenai.run/v2/aiproducts/askyoda/${project_uuid}/ask_llm_project`
 	payload = {
 		"query": text,
     "llm_provider": "openai",
-    "llm_model": "text-davinci-003"
+    "llm_model": "text-davinci-003",
+    "history": historyChat
 	}
   call = await fetch(url, { method : "POST", body: JSON.stringify(payload), headers : {"Content-Type": "application/json"} })
-  console.log(call)
 	if (!call.ok) {
-    console.log(call.text);
     return "Error"
   }
   response = await call.json()
