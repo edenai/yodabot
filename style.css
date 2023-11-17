@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 #edenai-yoda-chatbot-container {
