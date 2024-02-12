@@ -9,6 +9,6 @@ window.addEventListener("load", () => {
     (function(e,o,i,h,s,v,w,x,y){window.addEventListener(e,function(ev){if(ev.origin!=o)return;
     let cbc=document.getElementById(i);switch(ev.data){case h:cbc.style.height=v;cbc.style.width=w;
     break;case s:cbc.style.height=x;cbc.style.width=y}},false)})("message","https://edenai.github.io",
-    "edenai-message-iframe-container","hide","show","96px","100px","670px","400px");
+    "edenai-message-iframe-container","hide","show","96px","100px","670px","430px");
   })
     
