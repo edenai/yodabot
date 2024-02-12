@@ -1,13 +1,14 @@
-body {
+.chatBody {
     display: flex;
     justify-content: center;
     overflow: hidden;
     font-family: Lato, sans-serif;
+    margin-right: 5%;
 }
 
 #edenai-yoda-chatbot-container {
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 1s ease-out;
