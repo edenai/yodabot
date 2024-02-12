@@ -1,10 +1,16 @@
 var project_uuid = ""
+var provider= null
+var model=null
+var k=null
 var historyChat = [];
 
 window.addEventListener("load", () => {
   let params = (new URL(document.location)).searchParams;
   if (params) {
     project_uuid = params.get('project');
+    provider = params.get('provider');
+    model = params.get('model');
+    k= params.get('k');
   }
   }
 )
@@ -80,9 +86,10 @@ async function getYodaResponse(text) {
 	url = `https://api.edenai.run/v2/aiproducts/askyoda/${project_uuid}/ask_llm_project`
 	payload = {
 		"query": text,
-    "llm_provider": "openai",
-    "llm_model": "text-davinci-003",
-    "history": historyChat
+    "llm_provider": provider,
+    "llm_model": model,
+    "history": historyChat,
+    "k": k
 	}
   call = await fetch(url, { method : "POST", body: JSON.stringify(payload), headers : {"Content-Type": "application/json"} })
 	if (!call.ok) {
