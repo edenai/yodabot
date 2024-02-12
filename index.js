@@ -1,7 +1,7 @@
 var project_uuid = ""
 var provider= null
 var model=null
-var k=null
+var k=1
 var historyChat = [];
 
 window.addEventListener("load", () => {
@@ -10,7 +10,11 @@ window.addEventListener("load", () => {
     project_uuid = params.get('project');
     provider = params.get('provider');
     model = params.get('model');
-    k= params.get('k');
+    try {
+      k = parseInt(params.get('k')) || 1;
+    } catch(e) {
+      k = 1
+    }
   }
   }
 )
