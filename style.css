@@ -2,12 +2,11 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    font-family: Lato, sans-serif;
 }
 
 #edenai-yoda-chatbot-container {
     margin: 0 auto;
-    background-color: #f5f5f5;
-    border: 1px solid #cccccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -15,6 +14,8 @@ body {
     height: 0;
     width: 60px;
     overflow: hidden;
+    background-color: #f5f5f5c2;
+    backdrop-filter: blur(10px);
   }
 .visible {
   height: auto !important;
@@ -24,18 +25,16 @@ body {
 }
 
 #edenai-yoda-chatbot {
-    background-color: #f5f5f5;
-    border: 1px solid #eef1f5;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
     border-radius: 4px;
   }
   
   #edenai-yoda-header {
-    background-color: #428bca;
     color: #ffffff;
     padding: 10px;
     font-size: 0.5em;
     font-weight: bold;
+    background: linear-gradient(90deg, rgb(36 95 255) 0%, rgb(29 79 199 / 70%) 35%, rgb(20 58 119) 100%);
   }
 
   message-container {
@@ -163,16 +162,13 @@ body {
   }
 
   .edenai-yoda-prompt-answer-llm {
-    background: rgb(243, 244, 247);
     animation: slideIn 0.3s ease-in-out;
   }
 
   .edenai-yoda-chat-askllm-bubble {
-    /* padding-top: 1.5rem; */
     padding-bottom: 1.5rem;
     border-radius: 0.5rem;
     display: flex;
-    /* animation when message appear */
   }
 
   .edenai-yoda-icon-chat-eden {
@@ -191,7 +187,6 @@ body {
   .edenai-yoda-triangle-left.edenai-yoda-left-top:before{
     content: ' ';
     position: absolute;
-    /* border-top:2px red solid; */
     width:6px;
     top:15px;
     right:auto;
