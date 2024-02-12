@@ -4,6 +4,7 @@ var model=null
 var k=1
 var historyChat = [];
 
+
 window.addEventListener("load", () => {
   let params = (new URL(document.location)).searchParams;
   if (params) {
@@ -27,6 +28,7 @@ const inputForm = document.getElementById('edenai-yoda-input-form');
 const inputField = document.getElementById('edenai-yoda-input-field');
 const buttonChatbot = document.getElementById('edenai-yoda-open-close-chatbot')
 let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
+const loaderContainer = document.getElementById("loaderContainer")
 
 buttonChatbot.addEventListener('click', function(event) {
 	let buttonIcon = document.querySelector('#edenai-yoda-open-close-chatbot > i');
@@ -83,11 +85,18 @@ inputForm.addEventListener('submit', async function(event) {
     })
   } 
 });
-  
+  function addLoader(){
+    const newDiv = document.createElement("div")
+    newDiv.classList.add("loader")
+    newDiv.setAttribute("id", "loader")
+    const currentDiv = document.getElementById("loaderContainer");
+    currentDiv.parentNode.insertBefore(newDiv,currentDiv) 
+    console.log("create div")
+  }
 
 // Generate chatbot response function
 async function getYodaResponse(text) {
-	url = `https://api.edenai.run/v2/aiproducts/askyoda/${project_uuid}/ask_llm_project`
+	url = `https://api.edenai.run/v2/aiproducts/askyoda/e40459d3-7d28-454d-ad44-cb3e30764ecf/ask_llm_project`
 	payload = {
 		"query": text,
     "llm_provider": provider,
@@ -95,10 +104,15 @@ async function getYodaResponse(text) {
     "history": historyChat,
     "k": k
 	}
+  addLoader()
   call = await fetch(url, { method : "POST", body: JSON.stringify(payload), headers : {"Content-Type": "application/json"} })
 	if (!call.ok) {
+    const loader = document.getElementById("loader")
+    loader.remove()
     return "Error"
   }
   response = await call.json()
+  const loader = document.getElementById("loader")
+  loader.remove()
   return response.result;
-}
+ }
