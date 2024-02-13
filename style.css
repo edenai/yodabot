@@ -17,6 +17,7 @@
     overflow: hidden;
     background-color: #f5f5f5c2;
     backdrop-filter: blur(10px);
+    margin-bottom: 4%;
   }
 .visible {
   height: auto !important;
@@ -285,4 +286,13 @@
     40%{background-position:0% 100%, 50%   0%,100%  50%}
     60%{background-position:0%  50%, 50% 100%,100%   0%}
     80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+.workflowRef{
+  text-decoration: none;
+  color: rgb(164, 164, 164);
+  margin-right: 2%;
+}
+.footerChat{
+  display: flex;
+  justify-content: space-between;
 }
