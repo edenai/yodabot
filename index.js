@@ -93,6 +93,9 @@ inputForm.addEventListener('submit', async function(event) {
     currentDiv.parentNode.insertBefore(newDiv,currentDiv) 
     console.log("create div")
   }
+  function redirectToedenIA(){
+    window.parent.location.href = "https://eden-ai-bb3d63a76cc63c391-b254d9db6f2d6.webflow.io/workflows/askyoda"
+  }
 
 // Generate chatbot response function
 async function getYodaResponse(text) {
