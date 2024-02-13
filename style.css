@@ -277,6 +277,7 @@
   /* HTML: <div class="loader"></div> */
 .loader{
   width: 60px;
+  position: absolute;
   aspect-ratio: 3;
   --_g: no-repeat radial-gradient(circle closest-side,#757575 90%,#0000);
   background: 
@@ -306,8 +307,8 @@
 .footerChat{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50%;
-  position: absolute;
+  margin-bottom: 5%;
+  /* position: absolute; */
   bottom: -5rem;
 }
 .talk{
