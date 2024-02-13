@@ -270,7 +270,7 @@
   /* HTML: <div class="loader"></div> */
 .loader{
   width: 60px;
-  aspect-ratio: 2;
+  aspect-ratio: 3;
   --_g: no-repeat radial-gradient(circle closest-side,#757575 90%,#0000);
   background: 
     var(--_g) 0%   50%,
@@ -280,6 +280,7 @@
   animation: l3 1s infinite linear;
   margin-bottom: 3%;
   margin-left: 3%;
+  position: absolute;
 }
 @keyframes l3 {
     20%{background-position:0%   0%, 50%  50%,100%  50%}
@@ -292,6 +293,7 @@
   color: rgb(164, 164, 164);
   margin-right: 2%;
   font-size: 70%;
+  right: 0;
 }
 .footerChat{
   display: flex;
