@@ -72,8 +72,7 @@ inputForm.addEventListener('submit', async function(event) {
 	message.setAttribute('sentTime', currentTime)
   message.classList.add('edenai-yoda-chatbot-message','edenai-yoda-chatbot');
 	message.innerHTML = `<div alt="Card image cap" class="edenai-yoda-chat-askllm-bubble edenai-yoda-prompt-answer-llm"> <div alt="Card image cap"
-		class="edenai-yoda-icon-chat-llm edenai-yoda-icon-chat-eden"> <img height="30px" width="30px" src="assets/img/icons/EdenColors.svg" alt
-		style="filter: brightness(0) invert(1)" /> </div> </div>
+		class="edenai-yoda-icon-chat-llm edenai-yoda-icon-chat-eden"> <img height="50px" width="50px" src="assets/img/icons/Group_61205.svg" alt /> </div> </div>
 		<p class="edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top">${response}</p>`
   conversation.appendChild(message);
   message.scrollIntoView({behavior: "smooth"});
