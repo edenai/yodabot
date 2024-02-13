@@ -174,7 +174,7 @@
   }
 
   .edenai-yoda-icon-chat-eden {
-    background: #008ecc;
+    background: #255fff;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -230,7 +230,7 @@
   }
 
   .edenai-yoda-chatbot-button-open-close {
-    background-color: #008ecc;
+    background-color: #255fff;
     border: medium;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.2) 0px 2px 12px;
     border-radius: 50%;
@@ -261,6 +261,7 @@
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #888; 
+    border-radius: 5px;
   }
   
   /* Handle on hover */
@@ -288,11 +289,13 @@
     80%{background-position:0%  50%, 50%  50%,100% 100%}
 }
 .workflowRef{
-  text-decoration: none;
+  /* text-decoration: none; */
   color: rgb(164, 164, 164);
   margin-right: 2%;
+  font-size: 70%;
 }
 .footerChat{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2%;
 }
