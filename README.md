@@ -19,7 +19,7 @@ To be able to use `Eden AI YODA Chatbot` you have to:
 - Upload your data either from a *file*, a *text content* or from an *url*.
 - Copy this code into your HTML body:
 ```javascript
-<script src="https://cdn.jsdelivr.net/gh/edenai/yodabot@2434375/embed.js?project={project_id}"></script>
+<script src="https://cdn.jsdelivr.net/gh/edenai/yodabot@b05ff5f/embed.js?project={project_id}"></script>
 ```
 - change the *project_id* with your `project uuid` available in your *Ask Yoda* project.
 - Users accessing your website will now be able to use your trained YODA Chatbot and ask their questions and receive responses depending on data the Chatbot had been training on.
