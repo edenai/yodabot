@@ -96,6 +96,10 @@ inputForm.addEventListener('submit', async function(event) {
     window.parent.location.href = "https://eden-ai-bb3d63a76cc63c391-b254d9db6f2d6.webflow.io/workflows/askyoda"
   }
 
+  function redirectToYoda(){
+    window.parent.location.href = "https://app.edenai.run/user/register?referral=create-chatbot"
+  }
+
 // Generate chatbot response function
 async function getYodaResponse(text) {
 	url = `https://api.edenai.run/v2/aiproducts/askyoda/e40459d3-7d28-454d-ad44-cb3e30764ecf/ask_llm_project`

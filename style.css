@@ -312,7 +312,7 @@
   bottom: -5rem;
 }
 .talk{
-  color: rgb(131, 131, 131);
+  color: rgb(188 188 188);
   font-weight: 200;
   font-size: large;
 }
@@ -331,4 +331,7 @@
 }
 .edenIconColor{
   width: 20px;
+}
+.chatTitle{
+  font-size: 3em;
 }
