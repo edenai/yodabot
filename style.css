@@ -312,13 +312,13 @@
   bottom: -5rem;
 }
 .talk{
-  color: rgb(207, 207, 207);
+  color: rgb(131, 131, 131);
   font-weight: 200;
   font-size: large;
 }
 .create{
   text-decoration: none;
-  color: red;
+  color: #255fff;
   font-size: x-small;
   font-weight: 600;
   margin-right: 6%;
