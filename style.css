@@ -100,6 +100,7 @@
     display: flex;
     align-items: center;
     border-top: 1px solid #eef1f5;
+    margin-top: 7%;
   }
   
   #edenai-yoda-input-field {
@@ -315,6 +316,7 @@
   color: rgb(188 188 188);
   font-weight: 200;
   font-size: large;
+  margin-top: 0;
 }
 .create{
   text-decoration: none;
