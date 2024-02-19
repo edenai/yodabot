@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YODA</title>
+    <title>Yoda</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
-<body>
+<body class="chatBody">
     <div style="display: flex; flex-direction: column; align-items: end;">
       <div id="edenai-yoda-chatbot-container">
         <div id="edenai-yoda-header">
-            <h1>YODA</h1>
+            <h1 class="chatTitle">Eden - AI Assistant</h1>
+            <h2 class="talk" >Let's talk!</h2>
         </div>
         <div id="edenai-yoda-chatbot">
             <div id="edenai-yoda-conversation">
@@ -27,17 +28,19 @@
                     class="edenai-yoda-icon-chat-llm edenai-yoda-icon-chat-eden"
                   >
                     <img
-                    height="30px"
-                    width="30px"
-                    src="assets/img/icons/EdenColors.svg"
-                    alt
-                    style="filter: brightness(0) invert(1)"
+                    height="50px"
+                    width="50px"
+                    src="assets/img/icons/Group_61205.svg"
+                    
                     />
                   </div>
                 </div>
-                <p class="edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top">Hi! 👋 it's great to see you!</p>
+                <p class="edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top">Hello, I'm Eden 🤖 Glad to answer your questions about our service 😊 Keep in mind that I'm an AI and my answers may be wrong/incomplete!</p>
               </div>
             </div>
+            <div class="footerChat" >
+            <div id="loaderContainer"></div>
+          </div>
             <form id="edenai-yoda-input-form">
               <message-container>
                 <input id="edenai-yoda-input-field" type="text" placeholder="Type your message here">
@@ -50,7 +53,11 @@
                 
             </form>
         </div>  
-
+        <div class="linkEden" >
+          <img class="edenIconColor" src="./assets/img/icons/Group.svg" alt="">
+        <a href="https://www.edenai.co/workflows/askyoda" onclick="redirectToedenIA()" class="workflowRef">POWERED BY EDEN AI</a>
+        <a href="https://app.edenai.run/user/register?referral=create-chatbot" onclick="redirectToYoda()" class="create">CREATE YOUR OWN ></a>
+      </div>
       </div>
 
       <button id="edenai-yoda-open-close-chatbot" class="edenai-yoda-chatbot-button-open-close">

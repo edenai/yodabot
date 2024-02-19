@@ -1,20 +1,22 @@
-body {
+.chatBody {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    font-family: Lato, sans-serif;
+    margin-right: 5%;
 }
 
 #edenai-yoda-chatbot-container {
     margin: 0 auto;
-    background-color: #f5f5f5;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+    border-radius: 20px 20px 20px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 1s ease-out;
     height: 0;
     width: 60px;
     overflow: hidden;
+     background-color: #ffffff13; 
+    backdrop-filter: blur(20px);
   }
 .visible {
   height: auto !important;
@@ -24,18 +26,20 @@ body {
 }
 
 #edenai-yoda-chatbot {
-    background-color: #f5f5f5;
-    border: 1px solid #eef1f5;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
     border-radius: 4px;
   }
   
   #edenai-yoda-header {
-    background-color: #428bca;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     font-size: 0.5em;
     font-weight: bold;
+    /* background: linear-gradient(90deg, rgb(36 95 255) 0%, rgb(29 79 199 / 70%) 35%, rgb(20 58 119) 100%); */
   }
 
   message-container {
@@ -88,7 +92,7 @@ body {
     color: #333333;
     font-size: 15px;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 0px 15px 15px 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -96,6 +100,7 @@ body {
     display: flex;
     align-items: center;
     border-top: 1px solid #eef1f5;
+    margin-top: 7%;
   }
   
   #edenai-yoda-input-field {
@@ -163,20 +168,17 @@ body {
   }
 
   .edenai-yoda-prompt-answer-llm {
-    background: rgb(243, 244, 247);
     animation: slideIn 0.3s ease-in-out;
   }
 
   .edenai-yoda-chat-askllm-bubble {
-    /* padding-top: 1.5rem; */
     padding-bottom: 1.5rem;
     border-radius: 0.5rem;
     display: flex;
-    /* animation when message appear */
   }
 
-  .edenai-yoda-icon-chat-eden {
-    background: #008ecc;
+  /* .edenai-yoda-icon-chat-eden {
+    background: #255fff;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -185,30 +187,29 @@ body {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-  }
+  } */
 
 
   .edenai-yoda-triangle-left.edenai-yoda-left-top:before{
     content: ' ';
     position: absolute;
-    /* border-top:2px red solid; */
     width:6px;
     top:15px;
     right:auto;
     height:2px;
     background:white;
+    border-radius: 0px 15px 15px 15px;
   }
-  .edenai-yoda-triangle-left.edenai-yoda-left-top:after{
+  
+  /* .edenai-yoda-triangle-left.edenai-yoda-left-top:after{
     content: ' ';
     position: absolute;
     width: 30px;
     height: 40px;
     left: 40px;
-    /* right: -30px; */
     top: 15px; 
     background:radial-gradient(ellipse at bottom left, transparent 28px, white 29px , white 30px , white 31px);
-    /* border-top:solid red 2px;  */
-  }
+  } */
 
   .edenai-yoda-triangle-right.edenai-yoda-right-top:before{
     content: ' ';
@@ -218,22 +219,25 @@ body {
     top:15px;
     right:0;
     height:2px;
-    background:white;
+    background:#2944ff;
   }
-  .edenai-yoda-triangle-right.edenai-yoda-right-top:after{
+  .edenai-yoda-chatbot-text.edenai-yoda-triangle-right.edenai-yoda-right-top{
+    border-radius: 15px 0px 15px 15px;
+    background:#4157ea;
+    color: white;
+  }
+  /* .edenai-yoda-triangle-right.edenai-yoda-right-top:after{
     content: ' ';
     position: absolute;
     width: 30px;
     height: 40px;
     left: auto;
-    /* right: -30px; */
     top: 15px; 
     background:radial-gradient(ellipse at bottom right, transparent 28px, white 29px , white 30px , white 31px);
-    /* border-top:solid red 2px;  */
-  }
+  } */
 
   .edenai-yoda-chatbot-button-open-close {
-    background-color: #008ecc;
+    background-color: #255fff;
     border: medium;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.2) 0px 2px 12px;
     border-radius: 50%;
@@ -243,7 +247,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
 
   .edenai-yoda-chatbot-button-open-close:hover {
@@ -264,9 +268,75 @@ body {
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #888; 
+    border-radius: 5px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+  /* HTML: <div class="loader"></div> */
+.loader{
+  width: 60px;
+  position: absolute;
+  aspect-ratio: 3;
+  --_g: no-repeat radial-gradient(circle closest-side,#757575 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+  margin-bottom: 3%;
+  margin-left: 3%;
+}
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+.workflowRef{
+  /* text-decoration: none; */
+  color: rgb(221, 221, 221);
+  margin-right: 2%;
+  font-size: 70%;
+  font-weight: 500;
+  right: 0;
+  margin-right: 25%;
+}
+.footerChat{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  /* position: absolute; */
+  bottom: -5rem;
+}
+.talk{
+  color: rgb(188 188 188);
+  font-weight: 200;
+  font-size: large;
+  margin-top: 0;
+}
+.create{
+  text-decoration: none;
+  color: white;
+  font-size: x-small;
+  font-weight: 600;
+  margin-right: 6%;
+}
+.linkEden{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+}
+.edenIconColor{
+  width: 20px;
+}
+.chatTitle{
+  font-size: 3em;
+}
+#closeBtn{
+  font-size: 45px;
+}
