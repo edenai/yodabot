@@ -340,19 +340,3 @@
 #closeBtn{
   font-size: 45px;
 }
-
-@media screen and (max-width: 480px) {
-  .chatBodyContainer{
-    bottom: 0;
-    position: absolute;
-  }
-  .chatBody {
-    margin-right: 0%;
-  }
-  #edenai-yoda-conversation{
-    height: 250px;
-  }
-  .visible{
-    width: 300px !important;
-  }
-  }
