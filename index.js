@@ -32,11 +32,11 @@ const buttonChatbot = document.getElementById('edenai-yoda-open-close-chatbot')
 let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
 const loaderContainer = document.getElementById("loaderContainer")
 
-window.addEventListener('message', function(event) {
+window.parent.addEventListener('message', function(event) {
   const mainDiv = document.getElementsByClassName('chatBodyContainer');
   const chatBody = document.getElementsByClassName('chatBody');
   const visible = this.document.getElementsByClassName('visible');
-  const windowWidth = window.innerWidth;
+  const windowWidth = window.parent.innerWidth;
 
   if (windowWidth <= 480 && mainDiv.length > 0) {
     // Check if the first element exists before removing the class
