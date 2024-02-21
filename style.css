@@ -340,3 +340,18 @@
 #closeBtn{
   font-size: 45px;
 }
+
+.mobile{
+  bottom: 0;
+  position: absolute;
+}
+.phone{
+  margin-right: 0%;
+  justify-content: end;
+}
+.conv{
+  height: 250px;
+}
+.apear{
+  width: 300px !important;
+}
