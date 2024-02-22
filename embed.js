@@ -9,7 +9,6 @@ window.addEventListener("load", () => {
     (function(e,o,i,h,s,v,w,x,y){window.addEventListener(e,function(ev){if(ev.origin!=o)return;
     let cbc=document.getElementById(i);switch(ev.data){case h:cbc.style.height=v;cbc.style.width=w;
     break;case s:cbc.style.height=x;cbc.style.width=y}},false)})("message","https://edenai.github.io",
-<<<<<<< HEAD
     "edenai-message-iframe-container","hide","show","96px","100px","760px","430px");
     (function(){window.addEventListener('message', function(event) {
       const mainDiv = document.getElementsByClassName('chatBodyContainer');
@@ -35,8 +34,5 @@ window.addEventListener("load", () => {
         console.log("message received");
       }
     });})
-=======
-    "edenai-message-iframe-container","hide","show","96px","100px","780px","430px");
->>>>>>> 0dc64f21eddcd413a1f65c0b2504f2a54930e2f3
   })
     
