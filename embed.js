@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
     (function(){window.parent.addEventListener('message', function(event) {
       const mainDiv = document.getElementsByClassName('chatBodyContainer');
       const chatBody = document.getElementsByClassName('chatBody');
-      const visible = this.document.getElementsByClassName('visible');
+      const visible = document.getElementsByClassName('visible');
       const windowWidth = window.parent.innerWidth;
     
       if (windowWidth <= 480 && mainDiv.length > 0) {
