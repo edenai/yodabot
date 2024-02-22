@@ -32,44 +32,46 @@ const buttonChatbot = document.getElementById('edenai-yoda-open-close-chatbot')
 let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
 const loaderContainer = document.getElementById("loaderContainer")
 
-// window.addEventListener('message', function(event) {
-//   const mainDiv = document.getElementsByClassName('chatBodyContainer');
-//   const chatBody = document.getElementsByClassName('chatBody');
-//   const visible = this.document.getElementsByClassName('visible');
-//   const windowWidth = window.parent.innerWidth;
 
-//   if (windowWidth <= 480 && mainDiv.length > 0) {
-//     // Check if the first element exists before removing the class
-//     if (mainDiv[0]) {
-//       mainDiv[0].classList.add('mobile');
-//       chatBody[0].classList.add('phone');
-//       conversation.classList.add('conv');
-//       visible[0].classList.add('apear');
+ window.addEventListener('message', function(event) {
+   const mainDiv = document.getElementsByClassName('chatBodyContainer');
+   const chatBody = document.getElementsByClassName('chatBody');
+   const visible = this.document.getElementsByClassName('visible');
+   const windowWidth = window.parent.innerWidth;
 
-//       console.log("coucou");
-//     }
-//   } else {
-//     mainDiv[0].classList.remove('mobile');
-//     chatBody[0].classList.remove('phone');
-//     conversation.classList.remove('conv');
-//     visible[0].classList.remove('apear');
-//     console.log("message received");
-//   }
-// });
+   if (windowWidth <= 480 && mainDiv.length > 0) {
+     // Check if the first element exists before removing the class
+     if (mainDiv[0]) {
+       mainDiv[0].classList.add('mobile');
+       chatBody[0].classList.add('phone');
+       conversation.classList.add('conv');
+       visible[0].classList.add('apear');
 
-// buttonChatbot.addEventListener('click', function(event) {
-// 	let buttonIcon = document.querySelector('#edenai-yoda-open-close-chatbot > i');
-// 	let data = "hide"
-// 	if (chatBotContainer.classList.contains('visible')) {
-// 		chatBotContainer.classList.remove('visible');
-// 		buttonIcon.className = "fa fa-comment"
-// 	} else {
-// 		chatBotContainer.classList.add('visible');
-// 		buttonIcon.className = "fa fa-window-close"
-// 		data = "show"
-// 	}
-// 	window.parent.postMessage(data, "*");
-// });
+       console.log("coucou");
+     }
+   } else {
+     mainDiv[0].classList.remove('mobile');
+     chatBody[0].classList.remove('phone');
+     conversation.classList.remove('conv');
+     visible[0].classList.remove('apear');
+     console.log("message received");
+   }
+ });
+
+buttonChatbot.addEventListener('click', function(event) {
+	let buttonIcon = document.querySelector('#edenai-yoda-open-close-chatbot > i');
+	let data = "hide"
+	if (chatBotContainer.classList.contains('visible')) {
+		chatBotContainer.classList.remove('visible');
+		buttonIcon.className = "fa fa-comment"
+	} else {
+		chatBotContainer.classList.add('visible');
+		buttonIcon.className = "fa fa-window-close"
+		data = "show"
+	}
+	window.parent.postMessage(data, "*");
+});
+
 
 // Add event listener to input form
 inputForm.addEventListener('submit', async function(event) {
