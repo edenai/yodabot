@@ -33,30 +33,30 @@ let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
 const loaderContainer = document.getElementById("loaderContainer")
 
 
- window.addEventListener('message', function(event) {
-   const mainDiv = document.getElementsByClassName('chatBodyContainer');
-   const chatBody = document.getElementsByClassName('chatBody');
-   const visible = this.document.getElementsByClassName('visible');
-   const windowWidth = window.parent.innerWidth;
+//  window.addEventListener('message', function(event) {
+//    const mainDiv = document.getElementsByClassName('chatBodyContainer');
+//    const chatBody = document.getElementsByClassName('chatBody');
+//    const visible = this.document.getElementsByClassName('visible');
+//    const windowWidth = window.parent.innerWidth;
 
-   if (windowWidth <= 480 && mainDiv.length > 0) {
-     // Check if the first element exists before removing the class
-     if (mainDiv[0]) {
-       mainDiv[0].classList.add('mobile');
-       chatBody[0].classList.add('phone');
-       conversation.classList.add('conv');
-       visible[0].classList.add('apear');
+//    if (windowWidth <= 480 && mainDiv.length > 0) {
+//      // Check if the first element exists before removing the class
+//      if (mainDiv[0]) {
+//        mainDiv[0].classList.add('mobile');
+//        chatBody[0].classList.add('phone');
+//        conversation.classList.add('conv');
+//        visible[0].classList.add('apear');
 
-       console.log("coucou");
-     }
-   } else {
-     mainDiv[0].classList.remove('mobile');
-     chatBody[0].classList.remove('phone');
-     conversation.classList.remove('conv');
-     visible[0].classList.remove('apear');
-     console.log("message received");
-   }
- });
+//        console.log("coucou");
+//      }
+//    } else {
+//      mainDiv[0].classList.remove('mobile');
+//      chatBody[0].classList.remove('phone');
+//      conversation.classList.remove('conv');
+//      visible[0].classList.remove('apear');
+//      console.log("message received");
+//    }
+//  });
 
 buttonChatbot.addEventListener('click', function(event) {
 	let buttonIcon = document.querySelector('#edenai-yoda-open-close-chatbot > i');
