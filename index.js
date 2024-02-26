@@ -3,7 +3,7 @@ var provider= null
 var model=null
 var k=1
 var historyChat = [];
-
+let title = ""
 
 window.addEventListener("load", () => {
   let params = (new URL(document.location)).searchParams;
@@ -11,6 +11,7 @@ window.addEventListener("load", () => {
     project_uuid = params.get('project');
     provider = params.get('provider');
     model = params.get('model');
+    title = params.get('title');
     try {
       k = parseInt(params.get('k')) || 1;
     } catch(e) {
@@ -31,6 +32,8 @@ const inputField = document.getElementById('edenai-yoda-input-field');
 const buttonChatbot = document.getElementById('edenai-yoda-open-close-chatbot')
 let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
 const loaderContainer = document.getElementById("loaderContainer")
+const chatTitle = document.getElementsByClassName('chatTitle')
+chatTitle[0].innerHTML = title
 
 
 //  window.addEventListener('message', function(event) {
