@@ -15,6 +15,8 @@ window.addEventListener("load", () => {
       const chatBody = document.getElementsByClassName('chatBody');
       const visible = this.document.getElementsByClassName('visible');
       const windowWidth = window.parent.innerWidth;
+      console.log(windowWidth);
+      console.log("EMBED")
     
       if (windowWidth <= 480 && mainDiv.length > 0) {
         // Check if the first element exists before removing the class
