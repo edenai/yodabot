@@ -15,6 +15,11 @@ window.addEventListener("load", () => {
     const chatBody = document.getElementsByClassName('chatBody');
     const visible = this.document.getElementsByClassName('visible');
     const windowWidth = window.parent.innerWidth;
+    console.log(document.location.href)
+    const test = document.createElement('div');
+    test.innerHTML = "coucou";
+    test.style = "width: 100px; height: 100px; background-color: red; position: absolute; top: 0; left: 0; z-index: 100"
+    document.body.appendChild(test);
 
     if (windowWidth <= 480 && mainDiv.length > 0) {
       // Check if the first element exists before removing the class
