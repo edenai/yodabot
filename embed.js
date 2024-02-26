@@ -14,10 +14,20 @@ window.addEventListener("load", () => {
       const mainDiv = document.getElementsByClassName('chatBodyContainer');
       const chatBody = document.getElementsByClassName('chatBody');
       const visible = this.document.getElementsByClassName('visible');
+      const chatName = document.getElementsByClassName('chatTitle');
       const windowWidth = window.parent.innerWidth;
+      const chatTitle = ""
       console.log(windowWidth);
       console.log("EMBED")
-    
+      let params = (new URL(document.location)).searchParams;
+      if (params) {
+        project_uuid = params.get('project');
+        chatTitle = params.get('chatName');
+       chatName[0].innerHTML = params.get('chatName');
+      }
+      }
+    )
+    chatName[0].innerHTML = "Yoda"
       if (windowWidth <= 480 && mainDiv.length > 0) {
         // Check if the first element exists before removing the class
         if (mainDiv[0]) {
