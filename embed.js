@@ -21,9 +21,8 @@ window.addEventListener("load", () => {
       console.log("EMBED")
       let params = (new URL(document.location)).searchParams;
       if (params) {
-        project_uuid = params.get('project');
         chatTitle = params.get('chatName');
-       chatName[0].innerHTML = params.get('chatName');
+       chatName[0].innerHTML = chatTitle;
       }
       }
     )
@@ -46,5 +45,4 @@ window.addEventListener("load", () => {
         console.log("message received");
       }
     });})
-  });
     
