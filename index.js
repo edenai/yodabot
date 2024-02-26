@@ -3,14 +3,17 @@ var provider= null
 var model=null
 var k=1
 var historyChat = [];
-
+let title = ""
+let message = ""
+let color = ""
+const url2 = new URL(window.location.href);
 
 window.addEventListener("load", () => {
   let params = (new URL(document.location)).searchParams;
   if (params) {
     project_uuid = params.get('project');
     provider = params.get('provider');
-    model = params.get('model');
+    getInfoParams(params)
     try {
       k = parseInt(params.get('k')) || 1;
     } catch(e) {
@@ -20,6 +23,27 @@ window.addEventListener("load", () => {
   }
 )
 
+function getInfoParams(params){
+  model = params.get('model'); 
+  image = params.get('image');
+  const chatTitle = document.getElementsByClassName('chatTitle')
+  const yodaMessage = document.getElementsByClassName('edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top')
+  const buttonColor = document.getElementById('edenai-yoda-open-close-chatbot')
+ console.log(buttonColor.style["background-color"])
+if (url2.searchParams.has('title')) {
+  title = params.get('title');
+ console.log('The query parameter is set set');
+ chatTitle[0].innerHTML = title
+} 
+if (url2.searchParams.has('message')) {
+  message = params.get('message');
+  yodaMessage[0].innerHTML = message
+}
+if (url2.searchParams.has('color')) {
+  color = params.get('color');
+  buttonColor.style.setProperty("background-color", color, "important")
+}
+}
 
 
 
@@ -32,31 +56,6 @@ const buttonChatbot = document.getElementById('edenai-yoda-open-close-chatbot')
 let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
 const loaderContainer = document.getElementById("loaderContainer")
 
-
-//  window.addEventListener('message', function(event) {
-//    const mainDiv = document.getElementsByClassName('chatBodyContainer');
-//    const chatBody = document.getElementsByClassName('chatBody');
-//    const visible = this.document.getElementsByClassName('visible');
-//    const windowWidth = window.parent.innerWidth;
-
-//    if (windowWidth <= 480 && mainDiv.length > 0) {
-//      // Check if the first element exists before removing the class
-//      if (mainDiv[0]) {
-//        mainDiv[0].classList.add('mobile');
-//        chatBody[0].classList.add('phone');
-//        conversation.classList.add('conv');
-//        visible[0].classList.add('apear');
-
-//        console.log("coucou");
-//      }
-//    } else {
-//      mainDiv[0].classList.remove('mobile');
-//      chatBody[0].classList.remove('phone');
-//      conversation.classList.remove('conv');
-//      visible[0].classList.remove('apear');
-//      console.log("message received");
-//    }
-//  });
 
 buttonChatbot.addEventListener('click', function(event) {
 	let buttonIcon = document.querySelector('#edenai-yoda-open-close-chatbot > i');
@@ -75,6 +74,7 @@ buttonChatbot.addEventListener('click', function(event) {
 
 // Add event listener to input form
 inputForm.addEventListener('submit', async function(event) {
+  console.log("coucou")
   // Prevent form submission
   event.preventDefault();
 
@@ -101,7 +101,7 @@ inputForm.addEventListener('submit', async function(event) {
 	message.setAttribute('sentTime', currentTime)
   message.classList.add('edenai-yoda-chatbot-message','edenai-yoda-chatbot');
 	message.innerHTML = `<div alt="Card image cap" class="edenai-yoda-chat-askllm-bubble edenai-yoda-prompt-answer-llm"> <div alt="Card image cap"
-		class="edenai-yoda-icon-chat-llm edenai-yoda-icon-chat-eden"> <img height="50px" width="50px" src="assets/img/icons/Group_61205.svg" alt /> </div> </div>
+		class="edenai-yoda-icon-chat-llm edenai-yoda-icon-chat-eden"> <img height="50px" width="50px" src="assets/img/icons/chatbot.png" alt /> </div> </div>
 		<p class="edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top">${response}</p>`
   conversation.appendChild(message);
   message.scrollIntoView({behavior: "smooth"});

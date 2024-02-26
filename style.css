@@ -7,7 +7,7 @@
 }
 
 #edenai-yoda-chatbot-container {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -23,6 +23,8 @@
   opacity: 1 !important;
   transition: opacity 1s ease-out !important;
   width: 400px !important;
+  margin-top: 26%;
+ 
 }
 
 #edenai-yoda-chatbot {
@@ -51,7 +53,7 @@
   
   
   #edenai-yoda-conversation {
-    height: 400px;
+    height: 300px;
     overflow-y: auto;
     padding: 20px;
     display: flex;
@@ -354,4 +356,7 @@
 }
 .apear{
   width: 300px !important;
+}
+.edenIconColorWhite{
+  width: 50px;
 }
