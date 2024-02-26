@@ -27,22 +27,22 @@ window.addEventListener("load", () => {
       }
     )
     chatName[0].innerHTML = "Yoda"
-      if (windowWidth <= 480 && mainDiv.length > 0) {
-        // Check if the first element exists before removing the class
-        if (mainDiv[0]) {
-          mainDiv[0].classList.add('mobile');
-          chatBody[0].classList.add('phone');
-          conversation.classList.add('conv');
-          visible[0].classList.add('apear');
+      // if (windowWidth <= 480 && mainDiv.length > 0) {
+      //   // Check if the first element exists before removing the class
+      //   if (mainDiv[0]) {
+      //     mainDiv[0].classList.add('mobile');
+      //     chatBody[0].classList.add('phone');
+      //     conversation.classList.add('conv');
+      //     visible[0].classList.add('apear');
     
-          console.log("coucou");
-        }
-      } else {
-        mainDiv[0].classList.remove('mobile');
-        chatBody[0].classList.remove('phone');
-        conversation.classList.remove('conv');
-        visible[0].classList.remove('apear');
-        console.log("message received");
-      }
+      //     console.log("coucou");
+      //   }
+      // } else {
+      //   mainDiv[0].classList.remove('mobile');
+      //   chatBody[0].classList.remove('phone');
+      //   conversation.classList.remove('conv');
+      //   visible[0].classList.remove('apear');
+      //   console.log("message received");
+      // }
     });})
     
