@@ -8,6 +8,7 @@ let message = ""
 let color = ""
 const url2 = new URL(window.location.href);
 
+
 window.addEventListener("load", () => {
   let params = (new URL(document.location)).searchParams;
   if (params) {
@@ -22,6 +23,8 @@ window.addEventListener("load", () => {
   }
   }
 )
+
+
 
 function getInfoParams(params){
   model = params.get('model'); 
@@ -45,8 +48,6 @@ if (url2.searchParams.has('color')) {
 }
 }
 
-
-
 // Get chatbot elements
 const chatbot = document.getElementById('edenai-yoda-chatbot');
 const conversation = document.getElementById('edenai-yoda-conversation');
@@ -55,6 +56,13 @@ const inputField = document.getElementById('edenai-yoda-input-field');
 const buttonChatbot = document.getElementById('edenai-yoda-open-close-chatbot')
 let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
 const loaderContainer = document.getElementById("loaderContainer")
+
+window.addEventListener("message", (event) => {
+  if (event.origin === "https://eden-ai-bb3d63a76cc63c391-b254d9db6f2d6.webflow.io/") {
+    console.log("Message received: ", event.data);
+    inputField.value = event.data
+  }
+});
 
 
 buttonChatbot.addEventListener('click', function(event) {
