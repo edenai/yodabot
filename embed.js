@@ -32,12 +32,20 @@ window.addEventListener("load", () => {
   iframe.style.width = "66%";
   iframe.style.maxWidth = "67%";
   iframe.classList.add("mobile");
+<<<<<<< HEAD
   ref[0].style.marginTop = "41%!important";
+=======
+  ref.style.marginTop = "41% !important";
+>>>>>>> 604e7f67ebf41408aea100d5e1796408e8210748
   } else {
   document.getElementById('edenai-message-iframe-container').style.width = "400px";
   if(iframe.classList.contains("mobile")) {
     iframe.classList.remove("mobile");
+<<<<<<< HEAD
     ref[0].style.marginTop = "26%!important";
+=======
+    ref.style.marginTop = "26% !important";
+>>>>>>> 604e7f67ebf41408aea100d5e1796408e8210748
   }
   }
   }
