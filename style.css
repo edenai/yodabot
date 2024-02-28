@@ -17,13 +17,14 @@
     overflow: hidden;
      background-color: #ffffff13; 
     backdrop-filter: blur(20px);
+    margin-top: 1rem;
   }
 .visible {
   height: auto !important;
   opacity: 1 !important;
   transition: opacity 1s ease-out !important;
   width: 100%;
-  margin-top: 26%;
+  margin-top: 24% !important;
 }
 .mobile{
   width: 66%;
@@ -325,7 +326,7 @@
 .create{
   text-decoration: none;
   color: white;
-  font-size: x-small;
+  font-size: xx-small;
   font-weight: 600;
   margin-right: 6%;
 }
