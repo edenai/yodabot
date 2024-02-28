@@ -32,10 +32,8 @@ function getInfoParams(params){
   const chatTitle = document.getElementsByClassName('chatTitle')
   const yodaMessage = document.getElementsByClassName('edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top')
   const buttonColor = document.getElementById('edenai-yoda-open-close-chatbot')
- console.log(buttonColor.style["background-color"])
 if (url2.searchParams.has('title')) {
   title = params.get('title');
- console.log('The query parameter is set set');
  chatTitle[0].innerHTML = title
 } 
 if (url2.searchParams.has('message')) {
@@ -60,7 +58,6 @@ const iframe = document.getElementById('edenai-message-iframe-container')
 
 window.addEventListener("message", (event) => {
   if (event.origin === "https://eden-ai-bb3d63a76cc63c391-b254d9db6f2d6.webflow.io/") {
-    console.log("Message received: ", event.data);
     inputField.value = event.data
   }
 });
@@ -84,7 +81,6 @@ buttonChatbot.addEventListener('click', function(event) {
 
 // Add event listener to input form
 inputForm.addEventListener('submit', async function(event) {
-  console.log("coucou")
   // Prevent form submission
   event.preventDefault();
 
@@ -111,7 +107,7 @@ inputForm.addEventListener('submit', async function(event) {
 	message.setAttribute('sentTime', currentTime)
   message.classList.add('edenai-yoda-chatbot-message','edenai-yoda-chatbot');
 	message.innerHTML = `<div alt="Card image cap" class="edenai-yoda-chat-askllm-bubble edenai-yoda-prompt-answer-llm"> <div alt="Card image cap"
-		class="edenai-yoda-icon-chat-llm edenai-yoda-icon-chat-eden"> <img height="50px" width="50px" src="assets/img/icons/chatbot.png" alt /> </div> </div>
+		class="edenai-yoda-icon-chat-llm edenai-yoda-icon-chat-eden"> <img height="50px" width="50px" src="assets/img/icons/logoBot.svg" alt /> </div> </div>
 		<p class="edenai-yoda-chatbot-text edenai-yoda-triangle-left edenai-yoda-left-top">${response}</p>`
   conversation.appendChild(message);
   message.scrollIntoView({behavior: "smooth"});
@@ -129,7 +125,6 @@ inputForm.addEventListener('submit', async function(event) {
     newDiv.setAttribute("id", "loader")
     const currentDiv = document.getElementById("loaderContainer");
     currentDiv.parentNode.insertBefore(newDiv,currentDiv) 
-    console.log("create div")
   }
   function redirectToedenIA(){
     window.parent.location.href = "https://eden-ai-bb3d63a76cc63c391-b254d9db6f2d6.webflow.io/workflows/askyoda"
