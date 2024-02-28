@@ -10,26 +10,12 @@ document.body.appendChild(p)})("div","edenai-message-iframe-container","iframe",
 (function(e,o,i,h,s,v,w,x,y){window.addEventListener(e,function(ev){if(ev.origin!=o)return;
 let cbc=document.getElementById(i);switch(ev.data){case h:cbc.style.height=v;cbc.style.width=w;
 break;case s:cbc.style.height=x;cbc.style.width=y}},false)})("message","https://edenai.github.io",
-"edenai-message-iframe-container","hide","show","96px","100px","760px","430px");
+"edenai-message-iframe-container","hide","show","96px","400px","760px","430px");
 window.addEventListener('resize', function(event) {
 let w = window.innerWidth;
-const test = document.createElement('div');
-    test.innerHTML = w;
-    test.style.width = "100px";
-    test.style.height = "100px";
-    test.style.backgroundColor = "red";
-    test.style.position = "absolute";
-    test.style.top = "0";
-    test.style.left = "0";
-    test.style.zIndex = "100";
-    document.body.appendChild(test);
 if (w < 760) {
 document.getElementById('edenai-message-iframe-container').style.width = "66%";
-document.getElementById('edenai-message-iframe-container').style.border = "2px solid #255fff";
 const ref = document.getElementsByClassName('visible')
-ref[0].style.width = "66% !important";
-ref[0].style.border = "2px solid #255fff";
-ref[0].style.borderRadius = "0px";
 } else {
 document.getElementById('edenai-message-iframe-container').style.width = "500px";
 }
