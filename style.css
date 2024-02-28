@@ -22,7 +22,7 @@
   height: auto !important;
   opacity: 1 !important;
   transition: opacity 1s ease-out !important;
-  width: 400px !important;
+  width: 100%;
   margin-top: 26%;
  
 }

@@ -64,6 +64,15 @@ window.addEventListener("message", (event) => {
   }
 });
 
+window.addEventListener('message', function (event) {
+  if (event.origin === 'http://127.0.0.1:5500/index.html' && event.data && event.data.height && event.data.width) {
+      const iframeContainer = document.getElementById('edenai-message-iframe-container');
+      iframeContainer.style.height = event.data.height + 'px';
+      iframeContainer.style.width = event.data.width + 'px';
+      console.log("salut")
+  }
+});
+
 
 buttonChatbot.addEventListener('click', function(event) {
 	let buttonIcon = document.querySelector('#edenai-yoda-open-close-chatbot > i');
