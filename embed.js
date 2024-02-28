@@ -32,10 +32,12 @@ window.addEventListener("load", () => {
   iframe.style.width = "66%";
   iframe.style.maxWidth = "67%";
   iframe.classList.add("mobile");
+  ref.style.marginTop = "41% !important";
   } else {
   document.getElementById('edenai-message-iframe-container').style.width = "400px";
   if(iframe.classList.contains("mobile")) {
     iframe.classList.remove("mobile");
+    ref.style.marginTop = "26% !important";
   }
   }
   }
