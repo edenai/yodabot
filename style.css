@@ -13,7 +13,7 @@
     opacity: 0;
     transition: opacity 1s ease-out;
     height: 0;
-    width: 60px;
+    /* width: 60px; */
     overflow: hidden;
      background-color: #ffffff13; 
     backdrop-filter: blur(20px);
@@ -24,7 +24,9 @@
   transition: opacity 1s ease-out !important;
   width: 100%;
   margin-top: 26%;
- 
+}
+.mobile{
+  width: 66%;
 }
 
 #edenai-yoda-chatbot {

@@ -56,6 +56,7 @@ const inputField = document.getElementById('edenai-yoda-input-field');
 const buttonChatbot = document.getElementById('edenai-yoda-open-close-chatbot')
 let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
 const loaderContainer = document.getElementById("loaderContainer")
+const iframe = document.getElementById('edenai-message-iframe-container')
 
 window.addEventListener("message", (event) => {
   if (event.origin === "https://eden-ai-bb3d63a76cc63c391-b254d9db6f2d6.webflow.io/") {
@@ -64,14 +65,6 @@ window.addEventListener("message", (event) => {
   }
 });
 
-window.addEventListener('message', function (event) {
-  if (event.origin === 'http://127.0.0.1:5500/index.html' && event.data && event.data.height && event.data.width) {
-      const iframeContainer = document.getElementById('edenai-message-iframe-container');
-      iframeContainer.style.height = event.data.height + 'px';
-      iframeContainer.style.width = event.data.width + 'px';
-      console.log("salut")
-  }
-});
 
 
 buttonChatbot.addEventListener('click', function(event) {
@@ -83,6 +76,7 @@ buttonChatbot.addEventListener('click', function(event) {
 	} else {
 		chatBotContainer.classList.add('visible');
 		buttonIcon.className = "fa fa-window-close"
+    iframe.style.width = "400px"
 		data = "show"
 	}
 	window.parent.postMessage(data, "*");
