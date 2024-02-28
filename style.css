@@ -15,7 +15,8 @@
     height: 0;
     /* width: 60px; */
     overflow: hidden;
-     background-color: #ffffff13; 
+     background-color: #ffffff13;
+     -webkit-backdrop-filter: blur(20px); 
     backdrop-filter: blur(20px);
     margin-top: 1rem;
   }
