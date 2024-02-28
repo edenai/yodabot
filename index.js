@@ -76,7 +76,6 @@ buttonChatbot.addEventListener('click', function(event) {
 	} else {
 		chatBotContainer.classList.add('visible');
 		buttonIcon.className = "fa fa-window-close"
-    iframe.style.width = "400px"
 		data = "show"
 	}
 	window.parent.postMessage(data, "*");
