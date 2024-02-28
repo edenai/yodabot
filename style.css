@@ -16,16 +16,16 @@
     /* width: 60px; */
     overflow: hidden;
      background-color: #ffffff13;
-     -webkit-backdrop-filter: blur(20px); 
-    backdrop-filter: blur(20px);
-    margin-top: 1rem;
+     margin-top: 1rem;
+     -webkit-backdrop-filter: blur(20px) !important; 
+    backdrop-filter: blur(20px)!important;
   }
 .visible {
   height: auto !important;
   opacity: 1 !important;
   transition: opacity 1s ease-out !important;
   width: 100%;
-  margin-top: 24% !important;
+  margin-top: 24%!important;
 }
 .mobile{
   width: 66%;
