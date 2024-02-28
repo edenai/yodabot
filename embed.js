@@ -15,13 +15,15 @@ window.addEventListener("load", () => {
   let w = window.innerWidth;
   const ref = document.getElementsByClassName('visible')
   if (w < 760 && ref) {
-  iframe.style.width = "66%";
-  iframe.style.maxWidth = "67%";
+    console.log(ref ? ref[0] : "no ref")
+  iframe.style.width = "90%";
+  iframe.style.maxWidth = "90%";
   iframe.classList.add("mobile");
   } else {
   document.getElementById('edenai-message-iframe-container').style.width = "400px";
   if(iframe.classList.contains("mobile")) {
     iframe.classList.remove("mobile");
+    ref[0].style.marginTop = "26%!important";
   }
   }
   window.addEventListener('resize', function(event) {
@@ -29,9 +31,10 @@ window.addEventListener("load", () => {
   let w = window.innerWidth;
   const ref = document.getElementsByClassName('visible')
   if (w < 760 && ref) {
-  iframe.style.width = "66%";
-  iframe.style.maxWidth = "67%";
+  iframe.style.width = "90%";
+  iframe.style.maxWidth = "90%";
   iframe.classList.add("mobile");
+  ref[0].style.border ="solid 1px #255fff";
   ref[0].style.marginTop = "41%!important";
   } else {
   document.getElementById('edenai-message-iframe-container').style.width = "400px";
