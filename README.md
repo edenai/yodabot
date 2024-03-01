@@ -30,4 +30,5 @@ To be able to use `Eden AI YODA Chatbot` you have to:
 - the url should look like this:
 -  ```javascript
    <script src="https://cdn.jsdelivr.net/gh/edenai/yodabot@0dc64f2/embed.js?project={project_id}&provider=mistral&model=small&k=1&title=my customized bot&message=hello i’m customized bot&color=red"></script>
-```- Users accessing your website will now be able to use your trained YODA Chatbot and ask their questions and receive responses depending on data the Chatbot had been training on.
+
+- Users accessing your website will now be able to use your trained YODA Chatbot and ask their questions and receive responses depending on data the Chatbot had been training on.
