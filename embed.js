@@ -11,40 +11,6 @@ window.addEventListener("load", () => {
   let cbc=document.getElementById(i);switch(ev.data){case h:cbc.style.height=v;cbc.style.width=w;
   break;case s:cbc.style.height=x;cbc.style.width=y}},false)})("message","https://edenai.github.io",
   "edenai-message-iframe-container","hide","show","96px","400px","760px","px");
-  // const iframe = document.getElementById('edenai-message-iframe-container');
-  // let w = window.innerWidth;
-  // const ref = document.getElementsByClassName('visible')
-  // if (w < 760 && ref) {
-  //   console.log(ref ? ref[0] : "no ref")
-  // iframe.style.width = "90%";
-  // iframe.style.maxWidth = "90%";
-  // iframe.classList.add("mobile");
-  // } else {
-  // document.getElementById('edenai-message-iframe-container').style.width = "400px";
-  // if(iframe.classList.contains("mobile")) {
-  //   iframe.classList.remove("mobile");
-  //   ref[0].style.marginTop = "26%!important";
-  // }
-  // }
-  // window.addEventListener('resize', function(event) {
-  //   const iframe = document.getElementById('edenai-message-iframe-container');
-  // let w = window.innerWidth;
-  // const ref = document.getElementsByClassName('visible')
-  // if (w < 760 && ref) {
-  // iframe.style.width = "90%";
-  // iframe.style.maxWidth = "90%";
-  // iframe.classList.add("mobile");
-  // ref[0].style.border ="solid 1px #255fff";
-  // ref[0].style.marginTop = "41%!important";
-  // } else {
-  // document.getElementById('edenai-message-iframe-container').style.width = "400px";
-  // if(iframe.classList.contains("mobile")) {
-  //   iframe.classList.remove("mobile");
-  //   ref[0].style.marginTop = "26%!important";
-  // }
-  // }
-  // }
-  // )
   const iframe=document.getElementById("edenai-message-iframe-container");
   let w=window.innerWidth;const ref=document.getElementsByClassName("visible");
   w<760&&ref?(console.log(ref?ref[0]:"no ref"),
