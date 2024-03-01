@@ -27,5 +27,8 @@ To be able to use `Eden AI YODA Chatbot` you have to:
   - title: defined an title than replace the default title
   - message: defined a message who appear first in chat.
   - color: change logo’s color. you can enter “red”,”black”,”blue” ect… and you can add color code ex: “#FF0000”. WARNING !!! color parameter must be a last parameter in the URL.
-- the url should look like this `<script src="https://cdn.jsdelivr.net/gh/edenai/yodabot@0dc64f2/embed.js?project={project_id}&provider=mistral&model=small&k=1&title=my customized bot&message=hello i’m customized bot&color=red"></script>`
+- the url should look like this:
+-  ```javascript
+<script src="https://cdn.jsdelivr.net/gh/edenai/yodabot@0dc64f2/embed.js?project={project_id}&provider=mistral&model=small&k=1&title=my customized bot&message=hello i’m customized bot&color=red"></script>
+```
 - Users accessing your website will now be able to use your trained YODA Chatbot and ask their questions and receive responses depending on data the Chatbot had been training on.
