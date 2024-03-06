@@ -20,5 +20,14 @@ window.addEventListener("load", () => {
   i<760&&s?(t.style.width="90%",t.style.maxWidth="90%",t.classList.add(d),
   s[0].style.border="solid 1px #255fff",s[0].style.marginTop="41%!important"):(document.getElementById(y)
   .style.width="400px",t.classList.contains(d)&&(t.classList.remove(d),s[0].style.marginTop="26%!important"))}));
-  })("edenai-message-iframe-container","visible","mobile","resize");
+   const message = document.getElementById("edenai-yoda-conversation");
+   console.log(message)
+  if (w > 760 && ref) {
+    message.style.setProperty("width", "332px")
+  } else {
+    message.style.setProperty("width", "auto")
+  }
+console.log("coucou")
+  
+})("edenai-message-iframe-container","visible","mobile","resize");
 })
