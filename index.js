@@ -43,7 +43,7 @@ window.addEventListener("resize", (e) => {
     size.style.setProperty("width", "332px")
   }
   else {
-    size.style.width = ("80vw")
+    size.style.width = ("85vw")
   }
 })
 
