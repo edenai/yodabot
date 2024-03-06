@@ -9,6 +9,10 @@ let color = ""
 const url2 = new URL(window.location.href);
 let w=window.innerWidth
 
+function resizeMessagContainer() {
+
+}
+
 window.addEventListener("load", (e) => {
   let params = (new URL(document.location)).searchParams;
   if (params) {
@@ -21,17 +25,27 @@ window.addEventListener("load", (e) => {
       k = 1
     }
   }
-  console.log(e)
   const size = document.getElementById("edenai-yoda-conversation");
-  console.log(`size: ${size}`)
-  if(e.currentTarget.innerWidth > 380){
+  if(window.innerWidth > 380){
     size.style.setProperty("width", "332px")
   }
   else {
     size.style.removeProperty("width")
   }
 }
-)
+);
+
+
+window.addEventListener("resize", (e) => {
+  console.log(window.innerWidth)
+  const size = document.getElementById("edenai-yoda-conversation");
+  if(window.innerWidth > 380){
+    size.style.setProperty("width", "332px")
+  }
+  else {
+    size.style.removeProperty("width")
+  }
+})
 
 
 
@@ -64,11 +78,6 @@ const buttonChatbot = document.getElementById('edenai-yoda-open-close-chatbot')
 let chatBotContainer = document.getElementById('edenai-yoda-chatbot-container')
 const loaderContainer = document.getElementById("loaderContainer")
 const iframe = document.getElementById('edenai-message-iframe-container')
-
-
-window.addEventListener("resize", (e) => {
-  console.log(e.currentTarget.innerWidth)
-})
 
 function resizeMessagContainer() {
 }
