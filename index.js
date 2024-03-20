@@ -162,7 +162,7 @@ inputForm.addEventListener('submit', async function(event) {
 
 // Generate chatbot response function
 async function getYodaResponse(text) {
-	url = `https://api.edenai.run/v2/aiproducts/askyoda/e40459d3-7d28-454d-ad44-cb3e30764ecf/ask_llm_project`
+	url = `https://api.edenai.run/v2/aiproducts/askyoda/${project_uuid}/ask_llm_project`
 	payload = {
 		"query": text,
     "llm_provider": provider,
