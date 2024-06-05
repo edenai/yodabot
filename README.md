@@ -1,34 +1,51 @@
-# YODA Chatbot
+# 🌟 YODA Chatbot
 
-Yoda Chabot contains the source code for using and displaying Eden AI Yoda Chatbot in your website. The repository contains two branches: **main** and **embed**. The former holds the `iframe` source code, and it's deplyed on github pages. The latter holds the `embed` code for using the *chatbot* in your website. We will describe each of the `branches` content here after.
+Welcome to the YODA Chatbot repository! This repository contains the source code for integrating and displaying the Eden AI YODA Chatbot on your website. The repository is divided into two branches: **main** and **embed**. The **main** branch holds the `iframe` source code, while the **embed** branch contains the `embed` code for using the chatbot on your website. Let's dive into the details of each branch.
 
-### YODA Chatbot iframe (main branch)
+### 🌐 YODA Chatbot iframe (main branch)
 
 ![YODA ChatBot](assets/img/yoda_chat_bot.png)
 
-The main branch contains essentially the `iframe` source code for displaying the ChatBot in the bottom right corner of the user website.
+The **main** branch contains the `iframe` source code for displaying the ChatBot in the bottom right corner of your website.
 
-### YODA Chatbot embed code (embed branch)
+### 💻 YODA Chatbot embed code (embed branch)
 
-The YODA Chatbot embed branch contains the javascript code minified that allows the create and display an `iframe` holding the **YODA Chatbot** in your website for your users.
+The **embed** branch contains the minified JavaScript code that allows you to create and display an `iframe` holding the **YODA Chatbot** on your website for your users.
 
-## Usability
+## 🚀 Usability
 
-To be able to use `Eden AI YODA Chatbot` you have to:
-- Create an [`Ask Yoda`](https://docs.edenai.co/docs/ask-yoda) project.
-- Upload your data either from a *file*, a *text content* or from an *url*.
-- Copy this code into your HTML body:
-```javascript
-<script src="https://cdn.jsdelivr.net/gh/edenai/yodabot@0dc64f2/embed.js?project={project_id}&provider={your_llm_provider}&model={your_llm_model}&k={k}"></script>
-```
-- change the *project_id* with your `project uuid` available in your *Ask Yoda* project.
-- You can also **optionally** provider the `llm_provider`, the `llm_model` and also the parameter `k`?
-- you can also add some optional parameters:
-  - title: defined an title than replace the default title
-  - message: defined a message who appear first in chat.
-  - color: change logo’s color. you can enter “red”,”black”,”blue” ect… and you can add color code ex: “#FF0000”. WARNING !!! color parameter must be a last parameter in the URL.
-- the url should look like this:
--  ```javascript
+To use the `Eden AI YODA Chatbot`, follow these steps:
+
+1. **Create an [`Ask Yoda`](https://docs.edenai.co/docs/ask-yoda) Project:**
+   - Upload your data from a *file*, *text content*, or an *URL*.
+
+2. **Copy the Code:**
+   - Copy this code into your HTML body:
+   ```html
+   <script src="https://cdn.jsdelivr.net/gh/edenai/yodabot@0dc64f2/embed.js?project={project_id}&provider={your_llm_provider}&model={your_llm_model}&k={k}"></script>
+   ```
+
+3. **Replace Parameters:**
+   - Replace `{project_id}` with your `project uuid` available in your *Ask Yoda* project.
+   - Optionally, provide the `llm_provider`, `llm_model`, and the parameter `k`.
+
+4. **Add Optional Parameters:**
+   - **title:** Define a title to replace the default title.
+   - **message:** Define a message to appear first in the chat.
+   - **color:** Change the logo’s color. You can enter “red”, “black”, “blue”, etc., or use color codes like “#FF0000”. **Note:** The color parameter must be the last parameter in the URL.
+
+5. **Example URL:**
+   ```html
    <script src="https://cdn.jsdelivr.net/gh/edenai/yodabot@0dc64f2/embed.js?project={project_id}&provider=mistral&model=small&k=1&title=my customized bot&message=hello i’m customized bot&color=red"></script>
+   ```
 
-- Users accessing your website will now be able to use your trained YODA Chatbot and ask their questions and receive responses depending on data the Chatbot had been training on.
+6. **Deploy:**
+   - Users accessing your website will now be able to use your trained YODA Chatbot, ask questions, and receive responses based on the data the Chatbot has been trained on.
+
+---
+
+By following these steps, you can seamlessly integrate the YODA Chatbot into your website, enhancing user engagement and providing valuable insights into customer interactions. 🌟
+
+
+
+
