@@ -1,22 +1,39 @@
-# 🌟 YODA Chatbot
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Tests](https://github.com/edenai/edenai-apis/actions/workflows/test.yml/badge.svg)](https://github.com/edenai/edenai-apis/actions/workflows/test.yml)
 
-Welcome to the YODA Chatbot repository! This repository contains the source code for integrating and displaying the Eden AI YODA Chatbot on your website. The repository is divided into two branches: **main** and **embed**. The **main** branch holds the `iframe` source code, while the **embed** branch contains the `embed` code for using the chatbot on your website. Let's dive into the details of each branch.
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
 
-### 🌐 YODA Chatbot iframe (main branch)
+- [🌟 Custom Chatbot (RAG)](#-custom-chatbot-rag)
+  - [🌐 Chatbot iframe (main branch)](#-chatbot-iframe-main-branch)
+  - [💻 Chatbot embed code (embed branch)](#-chatbot-embed-code-embed-branch)
+  - [🚀 Usability](#-usability)
+    - [1. Create an [`Custom ChatBot RAG`](https://docs.edenai.co/docs/ask-yoda) Project:](#1-create-an-custom-chatbot-rag-project)
+    - [2. Copy the Code:](#2-copy-the-code)
+    - [3. Replace Parameters:](#3-replace-parameters)
+    - [4. Add Optional Parameters:](#4-add-optional-parameters)
+    - [5. Example URL:](#5-example-url)
+    - [6. Deploy:](#6-deploy)
+<!-- markdown-toc end -->
+
+# 🌟 Custom Chatbot (RAG)
+
+Welcome to the Chatbot repository! This repository contains the source code for integrating and displaying the Eden AI Custom Chatbot on your website. The repository is divided into two branches: **main** and **embed**. The **main** branch holds the `iframe` source code, while the **embed** branch contains the `embed` code for using the chatbot on your website. Let's dive into the details of each branch.
+
+### 🌐 Chatbot iframe (main branch)
 
 ![YODA ChatBot](assets/img/yoda_chat_bot.png)
 
 The **main** branch contains the `iframe` source code for displaying the ChatBot in the bottom right corner of your website.
 
-### 💻 YODA Chatbot embed code (embed branch)
+### 💻 Chatbot embed code (embed branch)
 
-The **embed** branch contains the minified JavaScript code that allows you to create and display an `iframe` holding the **YODA Chatbot** on your website for your users.
+The **embed** branch contains the minified JavaScript code that allows you to create and display an `iframe` holding the **Custom Chatbot** on your website for your users.
 
 ## 🚀 Usability
 
-To use the `Eden AI YODA Chatbot`, follow these steps:
+To use the `Eden AI Custom Chatbot`, follow these steps:
 
-1. **Create an [`Ask Yoda`](https://docs.edenai.co/docs/ask-yoda) Project:**
+1. **Create an [`Custom ChatBot RAG`](https://docs.edenai.co/docs/ask-yoda) Project:**
    - Upload your data from a *file*, *text content*, or an *URL*.
 
 2. **Copy the Code:**
@@ -26,7 +43,7 @@ To use the `Eden AI YODA Chatbot`, follow these steps:
    ```
 
 3. **Replace Parameters:**
-   - Replace `{project_id}` with your `project uuid` available in your *Ask Yoda* project.
+   - Replace `{project_id}` with your `project uuid` available in your *Custom ChatBot* project.
    - Optionally, provide the `llm_provider`, `llm_model`, and the parameter `k`.
 
 4. **Add Optional Parameters:**
@@ -40,12 +57,8 @@ To use the `Eden AI YODA Chatbot`, follow these steps:
    ```
 
 6. **Deploy:**
-   - Users accessing your website will now be able to use your trained YODA Chatbot, ask questions, and receive responses based on the data the Chatbot has been trained on.
+   - Users accessing your website will now be able to use your trained Chatbot, ask questions, and receive responses based on the data the Chatbot has been trained on.
 
 ---
 
-By following these steps, you can seamlessly integrate the YODA Chatbot into your website, enhancing user engagement and providing valuable insights into customer interactions. 🌟
-
-
-
-
+By following these steps, you can seamlessly integrate the Custom Chatbot into your website, enhancing user engagement and providing valuable insights into customer interactions. 🌟
