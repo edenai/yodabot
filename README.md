@@ -1,5 +1,3 @@
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Tests](https://github.com/edenai/edenai-apis/actions/workflows/test.yml/badge.svg)](https://github.com/edenai/edenai-apis/actions/workflows/test.yml)
-
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
