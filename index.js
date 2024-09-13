@@ -1,6 +1,8 @@
 var project_uuid = "";
 var provider = null;
 var model = null;
+var max_tokens = 0;
+var temperature = null;
 var k = 1;
 var historyChat = [];
 let title = "";
@@ -16,10 +18,12 @@ window.addEventListener("load", (e) => {
   if (params) {
     project_uuid = params.get("project");
     provider = params.get("provider");
+    max_tokens = params.get("max_tokens");
+    temperature = params.get("temperature");
     getInfoParams(params);
     try {
       k = parseInt(params.get("k")) || 1;
-    } catch (e) {
+    } catch (err) {
       k = 1;
     }
   }
@@ -165,16 +169,22 @@ function redirectToYoda() {
 
 // Generate chatbot response function
 async function getYodaResponse(text) {
-  url = `https://api.edenai.run/v2/aiproducts/askyoda/v2/${project_uuid}/ask_llm_project`;
-  payload = {
+  const url = `https://api.edenai.run/v2/aiproducts/askyoda/v2/${project_uuid}/ask_llm_project`;
+  const payload = {
     query: text,
     llm_provider: provider,
     llm_model: model,
     history: historyChat,
     k: k,
+    temperature,
   };
+  // only add max_tokens param if it is set by user
+  // if set to null, backend will throw an error
+  if (max_tokens) {
+    payload.max_tokens = max_tokens;
+  }
   addLoader();
-  call = await fetch(url, {
+  const call = await fetch(url, {
     method: "POST",
     body: JSON.stringify(payload),
     headers: { "Content-Type": "application/json" },
@@ -184,7 +194,7 @@ async function getYodaResponse(text) {
     loader.remove();
     return "Error";
   }
-  response = await call.json();
+  const response = await call.json();
   const loader = document.getElementById("loader");
   loader.remove();
   return response.result;
